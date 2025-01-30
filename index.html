@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Online Interval Trainer</title>
+    <style>
+        /* All previous mobile-optimized CSS */
+        body { margin: 0; padding: 10px; background: #1a1a1a; color: white; font-family: Arial, sans-serif; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+        h1 { font-size: 1.5rem; text-align: center; margin: 10px 0; }
+        .controls { margin: 15px 0; text-align: center; }
+        select { font-size: 1.1rem; padding: 8px; border-radius: 8px; background: #333; color: white; border: 1px solid #666; }
+        .game-container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin: 10px 0; }
+        .note-btn { aspect-ratio: 1; border: none; border-radius: 12px; background: #444; color: white; font-size: 1rem; touch-action: manipulation; transition: filter 0.2s; }
+        .note-btn:active { filter: brightness(1.2); }
+        .hidden { opacity: 0.5; pointer-events: none; }
+        .feedback { text-align: center; font-size: 1.2rem; min-height: 1.5em; margin: 10px 0; }
+        @media (min-width: 600px) { .game-container { grid-template-columns: repeat(4, 1fr); } .note-btn { font-size: 1.2rem; } }
+    </style>
+</head>
+<body>
+    <h1>Interval Training</h1>
+    <div class="controls">
+        <select id="tonicSelect">
+            <option value="261.63">C4</option>
+            <option value="277.18">C♯4/D♭4</option>
+            <option value="293.66">D4</option>
+            <option value="311.13">D♯4/E♭4</option>
+            <option value="329.63">E4</option>
+            <option value="349.23">F4</option>
+            <option value="369.99">F♯4/G♭4</option>
+            <option value="392.00">G4</option>
+            <option value="415.30">G♯4/A♭4</option>
+            <option value="440.00">A4</option>
+            <option value="466.16">A♯4/B♭4</option>
+            <option value="493.88">B4</option>
+        </select>
+    </div>
+    <div class="game-container" id="gameContainer"></div>
+    <div class="feedback" id="feedback"></div>
+
+    <script>
+        // All previous JavaScript code
+        let audioContext;
+        const initAudioContext = () => { if (!audioContext) audioContext = new (window.AudioContext || window.webkitAudioContext)(); };
+        let baseFrequency = 261.63;
+        const intervals = [/* interval data */];
+        let currentInterval = null;
+        let buttons = [];
+        let feedbackTimeout;
+
+        function createButtons() { /* button creation code */ }
+        function playTones(freq1, freq2) { /* audio playback code */ }
+        function playRandomInterval() { /* game logic */ }
+        function checkMatch(intervalName) { /* validation code */ }
+        function initGame() { /* initialization code */ }
+
+        initGame();
+    </script>
+</body>
+</html>
